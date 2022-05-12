@@ -18,8 +18,6 @@ public class Drugstores implements ServicesOffered{
 
 
 
-
-
     //Getter
     public int getId() {
         return id;
@@ -42,6 +40,7 @@ public class Drugstores implements ServicesOffered{
     }
 
     public Drugstores(){}
+
     public Drugstores(int id, String name, ServiceCategories businessType, String city, String address){
         this.id = id;
         this.name = name;

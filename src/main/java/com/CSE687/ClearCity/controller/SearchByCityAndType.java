@@ -3,28 +3,23 @@ package com.CSE687.ClearCity.controller;
 import com.CSE687.ClearCity.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
-public class SearchByCity implements Search{
+public class SearchByCityAndType implements Search{
 
 
     AvailableServices services;
 
     @Override
-    @GetMapping("/searchByCity")
-    public ResponseEntity<?> searchServices(String city) {
+    @GetMapping("/searchByCityAndService")
+    public ResponseEntity<?> searchServices(String serviceAndCity) {
 
-        this.services = new SearchByCityService();
-        ResponseEntity<?> response = ResponseEntity.ok(services.commonProxyService(city));
+        this.services = new SearchByCityAndTypeService();
+        ResponseEntity<?> response = ResponseEntity.ok(services.commonProxyService(serviceAndCity));
         return response;
+
 
     }
 }
-
-

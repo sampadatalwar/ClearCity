@@ -1,44 +1,47 @@
 package com.CSE687.ClearCity.service;
 
-import org.springframework.http.ResponseEntity;
-
 import java.util.List;
 
-public class ProxyService implements AvailableServices {
+public class SearchByCityAndTypeService implements AvailableServices{
+    @Override
+    public List<?> commonProxyService(String serviceAndCity) {
 
-    //controller code.
-    public ResponseEntity<?> commonProxyService(String service) {
-
+        String[] splitted = serviceAndCity.split("\\s+");
+        //System.out.println("Enter service");
+        String service = splitted[0];
+        //System.out.println("Enter city");
+        String city = splitted[1];
 
         if(service.equalsIgnoreCase("Drugstores")){
             DrugstoreService d = new DrugstoreService();
-            return ResponseEntity.ok(d.retrieveList());
+            return d.retrieveListByCity(city) ;
         }
 
         else if(service.equalsIgnoreCase("Healthcare")){
             HealthcareService h = new HealthcareService();
-            return ResponseEntity.ok(h.retrieveList());
+            return h.retrieveListByCity(city);
         }
 
         else if(service.equalsIgnoreCase("Helplines")){
             EmergencyHelplineService eh = new EmergencyHelplineService();
-            return ResponseEntity.ok(eh.retrieveList());
+            return eh.retrieveListByCity(city);
         }
 
         else if(service.equalsIgnoreCase("Restaurants")){
             RestaurantService r = new RestaurantService();
-            return ResponseEntity.ok(r.retrieveList());
+            return r.retrieveListByCity(city);
         }
 
         else if(service.equalsIgnoreCase("Shopping")){
             ShoppingService s = new ShoppingService();
-            return ResponseEntity.ok(s.retrieveList());
+            return s.retrieveListByCity(city);
         }
 
         else{
             System.out.println("Service Not Found");
         }
-        return null;
-    }
 
+        return null;
+
+    }
 }

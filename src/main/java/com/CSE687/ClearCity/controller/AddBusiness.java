@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class AddBusiness {
 // make interface
     @GetMapping("/addBusiness")
-    public String addBusiness(){
+    public String addBusiness(int id, String name, ServicesOffered.ServiceCategories category, String city, String address){
         DrugstoreService d = new DrugstoreService();
         //handle exception
-        d.addDrugstore(01,"New Store", ServicesOffered.ServiceCategories.Drugstore,"Syracuse","");
+        d.addDrugstore(id,name, category,city,address);
         return "Service added successfully";
     }
 

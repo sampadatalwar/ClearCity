@@ -12,12 +12,13 @@ public class DrugstoreService implements Services {
 
     private static List<Drugstores> drugstoreList = new ArrayList<Drugstores>();
 
+
     static{
 
-        drugstoreList.add(new Drugstores(01,"CVS Healthcare", ServiceCategories.Drugstore,"Syracuse",""));
-        drugstoreList.add(new Drugstores(02,"Walgreens",ServiceCategories.Drugstore,"Syracuse",""));
-        drugstoreList.add(new Drugstores(03,"Rite Aid",ServiceCategories.Drugstore,"Syracuse",""));
-        drugstoreList.add(new Drugstores(04,"Costco",ServiceCategories.Drugstore,"Syracuse",""));
+        drugstoreList.add(new Drugstores(01,"CVS Healthcare", ServiceCategories.Drugstore,"Syracuse","700 S Crouse Ave, Syracuse, NY 13210"));
+        drugstoreList.add(new Drugstores(02,"Walgreens",ServiceCategories.Drugstore,"Syracuse","1405 E Genesee St, Syracuse, NY 13210"));
+        drugstoreList.add(new Drugstores(03,"Rite Aid",ServiceCategories.Drugstore,"Syracuse","519 Butternut St, Syracuse, NY 13208"));
+        drugstoreList.add(new Drugstores(04,"Costco",ServiceCategories.Drugstore,"Syracuse","519 Butternut St, Syracuse, NY 13208"));
     }
 
     public static void setDrugstoreList(List<Drugstores> drugstoreList) {
