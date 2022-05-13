@@ -1,7 +1,6 @@
 package com.CSE687.ClearCity.controller;
 
 import com.CSE687.ClearCity.service.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +16,7 @@ public class SearchByCityAndType implements Search{
     public ResponseEntity<?> searchServices(String serviceAndCity) {
 
         this.services = new SearchByCityAndTypeService();
-        ResponseEntity<?> response = ResponseEntity.ok(services.commonProxyService(serviceAndCity));
+        ResponseEntity<?> response = ResponseEntity.ok(services.retrieveServiceList(serviceAndCity));
         return response;
 
 

@@ -2,7 +2,6 @@ package com.CSE687.ClearCity.service;
 
 import com.CSE687.ClearCity.model.Drugstores;
 import com.CSE687.ClearCity.model.ServicesOffered;
-import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -10,7 +9,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +48,7 @@ class DrugstoreServiceTest {
         //thenReturn(drugstoreList);
         //given(services.commonProxyService("drugstores")).willReturn(expectedDrugstoreList);
         //doReturn(result).when(services.commonProxyService("drugstores"));
-        ResponseEntity<?> response = ResponseEntity.ok(services1.commonProxyService("drugstores"));
+        ResponseEntity<?> response = ResponseEntity.ok(services1.retrieveServiceList("drugstores"));
 
         System.out.println(response);
         assertEquals(result,response);

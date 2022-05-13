@@ -12,7 +12,6 @@ public class Drugstores implements ServicesOffered{
     public String name;
     public ServiceCategories businessType;
     public String city;
-    //public List<String> address;
     public String address;
 
 

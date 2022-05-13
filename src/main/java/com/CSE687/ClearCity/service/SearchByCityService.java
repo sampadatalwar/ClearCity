@@ -1,11 +1,14 @@
 package com.CSE687.ClearCity.service;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class SearchByCityService implements AvailableServices{
     @Override
-    public List<?> commonProxyService(String city) {
+    public List<?> retrieveServiceList(String city) {
 
         List<Object> filteredList = new ArrayList<>();
 

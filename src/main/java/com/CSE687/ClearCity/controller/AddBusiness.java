@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AddBusiness {
-// make interface
+public class AddBusiness implements Add{
+
     @GetMapping("/addBusiness")
     public String addBusiness(int id, String name, ServicesOffered.ServiceCategories category, String city, String address){
         DrugstoreService d = new DrugstoreService();

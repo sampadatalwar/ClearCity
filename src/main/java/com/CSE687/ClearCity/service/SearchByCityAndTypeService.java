@@ -1,10 +1,13 @@
 package com.CSE687.ClearCity.service;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public class SearchByCityAndTypeService implements AvailableServices{
     @Override
-    public List<?> commonProxyService(String serviceAndCity) {
+    public List<?> retrieveServiceList(String serviceAndCity) {
 
         String[] splitted = serviceAndCity.split("\\s+");
         //System.out.println("Enter service");

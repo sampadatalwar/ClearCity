@@ -4,7 +4,6 @@ import java.util.List;
 
 public interface Services {
 
-
     public List<?> retrieveList();
     public List<?> retrieveListByCity(String s);
 

@@ -1,11 +1,15 @@
 package com.CSE687.ClearCity.service;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public class SearchByTypeService implements AvailableServices {
 
-    //controller code.
-    public List<?> commonProxyService(String service) {
+    //Adapter class
+
+    public List<?> retrieveServiceList(String service) {
 
 
         if(service.equalsIgnoreCase("Drugstores")){

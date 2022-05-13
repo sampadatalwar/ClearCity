@@ -1,7 +1,5 @@
 package com.CSE687.ClearCity.model;
 
-import java.util.List;
-
 
 public interface ServicesOffered {
 
@@ -12,13 +10,6 @@ public interface ServicesOffered {
         Drugstore,
         Shopping
     }
-
-
-        //public List<Object> getServiceList();
-    //add
-    //delete
-    //return entire list
-    //return according to city
 
 }
 

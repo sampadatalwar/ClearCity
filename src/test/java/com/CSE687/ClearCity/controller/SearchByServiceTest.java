@@ -51,7 +51,7 @@ class SearchByServiceTest {
 
         ResponseEntity<?>  result = ResponseEntity.ok(drugstoreList);
 
-        doReturn(result).when(services.commonProxyService("drugstores"));
+        doReturn(result).when(services.retrieveServiceList("drugstores"));
         ResponseEntity<?> response = search.searchServices("drugstores");
 
         mockMvc.perform(
