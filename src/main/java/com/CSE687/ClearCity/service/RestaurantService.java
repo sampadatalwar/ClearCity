@@ -20,11 +20,13 @@ public class RestaurantService implements Services{
         restaurantList.add(new Restaurants(05,"Lemon Grass Restaurant", ServiceCategories.Restaurant,"Syracuse","113 Walton St, Syracuse, NY 13202"));
     }
 
+    @Override
     public List<Restaurants> retrieveList(){
 
         return restaurantList;
     }
 
+    @Override
     public List<Restaurants> retrieveListByCity(String city) {
 
         List<Restaurants> filteredList = new ArrayList<Restaurants>();

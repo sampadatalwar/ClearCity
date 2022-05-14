@@ -18,11 +18,13 @@ public class EmergencyHelplineService implements Services {
         helplineList.add(new EmergencyHelpline(03,"Onondaga County Public Assistance Division",ServiceCategories.EmergencyHelpline,"Syracuse","(315) 435-2700"));
     }
 
+    @Override
     public List<EmergencyHelpline> retrieveList(){
 
         return helplineList;
     }
 
+    @Override
     public List<EmergencyHelpline> retrieveListByCity(String city) {
 
         List<EmergencyHelpline> filteredList = new ArrayList<EmergencyHelpline>();

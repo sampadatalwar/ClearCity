@@ -9,7 +9,6 @@ import java.util.List;
 public class SearchAvailableServices implements AvailableServices{
 
     @Override
-    @GetMapping("/search")
     public List<?> retrieveServiceList(String service) {
 
         List<String> str = new ArrayList<>();

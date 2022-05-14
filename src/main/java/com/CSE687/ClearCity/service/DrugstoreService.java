@@ -34,11 +34,13 @@ public class DrugstoreService implements Services {
         return drugstoreList;
     }
 
+    @Override
     public List<Drugstores> retrieveList(){
 
         return drugstoreList;
     }
 
+    @Override
     public List<Drugstores> retrieveListByCity(String city) {
 
         List<Drugstores> filteredList = new ArrayList<Drugstores>();

@@ -19,11 +19,13 @@ public class HealthcareService implements Services {
         healthcareList.add(new HealthcareInstitutions(03, "Syracuse University Health Services",ServiceCategories.Healthcare,"Syracuse","150 Sims Dr, Syracuse, NY 13210"));
     }
 
+    @Override
     public List<HealthcareInstitutions> retrieveList(){
 
         return healthcareList;
     }
 
+    @Override
     public List<HealthcareInstitutions> retrieveListByCity(String city) {
 
         List<HealthcareInstitutions> filteredList = new ArrayList<HealthcareInstitutions>();

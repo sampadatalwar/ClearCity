@@ -7,6 +7,7 @@ import java.util.List;
 
 @Service
 public class SearchByCityService implements AvailableServices{
+
     @Override
     public List<?> retrieveServiceList(String city) {
 
