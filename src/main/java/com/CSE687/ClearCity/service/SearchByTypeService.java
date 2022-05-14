@@ -1,14 +1,15 @@
 package com.CSE687.ClearCity.service;
 
+import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//Adapter class
 @Service
 public class SearchByTypeService implements AvailableServices {
 
-    //Adapter class
-
+    @Override
     public List<?> retrieveServiceList(String service) {
 
 

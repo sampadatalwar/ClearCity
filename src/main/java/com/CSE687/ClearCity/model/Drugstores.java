@@ -15,9 +15,7 @@ public class Drugstores implements ServicesOffered{
     public String address;
 
 
-
-
-    //Getter
+    //Getters
     public int getId() {
         return id;
     }

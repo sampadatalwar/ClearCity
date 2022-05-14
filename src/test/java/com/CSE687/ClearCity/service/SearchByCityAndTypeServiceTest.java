@@ -3,16 +3,15 @@ package com.CSE687.ClearCity.service;
 import com.CSE687.ClearCity.model.Drugstores;
 import com.CSE687.ClearCity.model.ServicesOffered;
 import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+class SearchByCityAndTypeServiceTest {
 
-
-class DrugstoreServiceTest {
-
-
-    private AvailableServices services = new SearchByTypeService();
+    private AvailableServices services = new SearchByCityAndTypeService();
     @Test
     void commonServiceTest(){
 
@@ -24,12 +23,13 @@ class DrugstoreServiceTest {
         expectedDrugstoreList.add(new Drugstores(04,"Costco", ServicesOffered.ServiceCategories.Drugstore,"Syracuse",""));
 
 
-        List<?> response = services.retrieveServiceList("drugstores");
+        List<?> response = services.retrieveServiceList("drugstores syracuse");
 
         List<Drugstores> resp = (List<Drugstores>) response;
 
-        assertEquals(expectedDrugstoreList.get(1).getId(),resp.get(1).getId());
+        assertEquals(expectedDrugstoreList.size(),resp.size());
 
     }
+
 
 }

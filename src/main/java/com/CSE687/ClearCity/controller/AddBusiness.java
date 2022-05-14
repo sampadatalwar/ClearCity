@@ -11,7 +11,7 @@ public class AddBusiness implements Add{
     @GetMapping("/addBusiness")
     public String addBusiness(int id, String name, ServicesOffered.ServiceCategories category, String city, String address){
         DrugstoreService d = new DrugstoreService();
-        //handle exception
+
         d.addDrugstore(id,name, category,city,address);
         return "Service added successfully";
     }
